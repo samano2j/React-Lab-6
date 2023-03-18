@@ -102,11 +102,11 @@ const CreatePost = ({ user, handleAddPost }) => {
     imageInputRef.current.value = ''
   }
   return (
-    <div class="flex flex-col items-center gap-y-5 text-white my-5">
-      <h1 class="text-5xl font-bold">Create New Post</h1>
-      <form onSubmit={handleSubmit} class="flex flex-col md:flex-row">
+    <div className="flex flex-col items-center gap-y-5 text-white my-5">
+      <h1 className="text-5xl font-bold">Create New Post</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row">
         <input
-          class="border-2 text-black rounded-l-lg py-1 px-2"
+          className="border-2 text-black rounded-l-lg py-1 px-2"
           type="text"
           placeholder="Add Post Content"
           onChange={(e) => setContent(e.target.value)}
@@ -127,7 +127,7 @@ const CreatePost = ({ user, handleAddPost }) => {
           - we can then set the value of the input element to an empty string
         */}
         <input type="file" onChange={(e) => setImage(e.target.files[0])} ref={imageInputRef} 
-          class="
+          className="
           file:mr-4 file:py-3 file:px-4
           file:rounded-r-lg file:border-0
           file:text-sm
@@ -137,7 +137,7 @@ const CreatePost = ({ user, handleAddPost }) => {
           file:w-2/4
           "
         />
-        <button class="bg-blue-500 p-2 rounded-lg text-xl font-bold hover:bg-white hover:text-blue-500" type="submit">Submit Post</button>
+        <button className="bg-blue-500 p-2 rounded-lg text-xl font-bold hover:bg-white hover:text-blue-500" type="submit">Submit Post</button>
       </form>
     </div>
   );
